@@ -1,0 +1,4 @@
+  1  Juice 100  2
+  2  Milk 60  5
+  3  Bread 30  2
+  4  Butter 80  4
