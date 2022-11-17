@@ -40,19 +40,19 @@ void shopping :: menu() {
     cout << "\t\t\t                        |\n";
     cout << "\t\t\t|   3) Exit             |\n";
     cout << "\t\t\t                        |\n";
-    cout << "\n\t\t\t  Please Select!";
+    cout << "\n\t\t\t  Please Select! ";
     cin >> choice;
 
     switch(choice) 
     {
         case 1:
             cout << "\t\t\t  Please login  \n";
-            cout << "\t\t\t  Enter Email   \n";
+            cout << "\t\t\t  Enter Email : ";
             cin >> email;
-            cout << "\t\t\t  Password :    \n";
+            cout << "\t\t\t  Password : ";
             cin >> password;
 
-            if(email == "robby@email.com" && password == "robby@123") {
+            if(email == "aj@mail" && password == "ashish@123") {
                 
                 administrator();
             }
@@ -72,7 +72,7 @@ void shopping :: menu() {
             }
             default :
                 {
-                    cout << "Please select from given option ";
+                    cout << "\n\t\t Please select from given option : ";
                 }
     }
 
@@ -93,7 +93,7 @@ void shopping:: administrator()
     cout << "\n\t\t\t|                               |";
     cout << "\n\t\t\t|______4) Back to main menu_____|";
 
-    cout << "\t\t\t  Please enter your choce  ";
+    cout << "\n\t\t  Please enter your choce  ";
     cin >> choice;
 
     switch(choice)
@@ -163,16 +163,16 @@ void shopping :: add()
     string n;
 
     cout << "\n\n\t\t\t  Add new product";
-    cout <<"\n\n\t\t\t  Product code of the product ";
+    cout <<"\n\n\t\t\t  Product code of the product : ";
     cin >> pcode;
-    cout << "\n\n\t Name of the product ";
+    cout << "\n\n\t Name of the product : ";
     cin >> pname;
-    cout << "\n\n\t Price of the product";
+    cout << "\n\n\t Price of the product : ";
     cin >> price;
-    cout << "\n\n\t Discount on the product";
+    cout << "\n\n\t Discount on the product : ";
     cin >> dis;
 
-    data.open("database.txt", ios::in); // we in for reading, out for writing
+    data.open("database.txt", ios::in); // we use in for reading, out for writing
 
     if(!data) 
     {
@@ -217,8 +217,8 @@ void shopping :: edit()
     float d;
     string n;
 
-    cout << "\n\t\t\t Modify the record";
-    cout << "\n\t\t\t Product Code :";
+    cout << "\n\t\t\t Modify the record ";
+    cout << "\n\t\t\t Product Code : ";
     cin >> pkey;
 
     data.open("databasae.txt", ios :: in);
@@ -235,13 +235,13 @@ void shopping :: edit()
         while(!data.eof()) 
         {
             if(pkey == pcode){
-                cout << "\n\t\t Product new code :" ;
+                cout << "\n\t\t Product new code : " ;
                 cin >> c;
-                cout << "\n\t\t Name of the product :";
+                cout << "\n\t\t Name of the product : ";
                 cin >> n;
                 cout << "\n\t\t Price: ";
                 cin >> p;
-                cout << "\n\t\t Discount :";
+                cout << "\n\t\t Discount : ";
                 cin >> d;
                 data1 << " " << c << " " << n << " " << p << " " << d << "\n"; 
                 cout << "\n\n\t\t Record edited";
@@ -360,7 +360,7 @@ void shopping :: receipt()
             m:
             cout << "\n\n Enter Product code : ";
             cin >> arrc[c];
-            cout << "\n\n Enter the product quantity :";
+            cout << "\n\n Enter the product quantity : ";
             cin >> arrq[c];
             for (int i = 0; i < c; i++) {
                 if(arrc[c] == arrc[i]) 
